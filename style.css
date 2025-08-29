@@ -1,0 +1,45 @@
+.container {
+    position: relative;
+
+    display: inline-block;
+    margin: 0;
+    padding: 1.2rem;
+
+    overflow: hidden;
+}
+
+.container::after,
+.container::before {
+    content: '';
+
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+
+    z-index: 2;
+
+    width: 75px;
+    height: 75px;
+
+    background: #fff;
+    box-shadow: 0 0 1rem rgb(0 0 0 / 50%);
+
+    transform: rotate(40deg);
+    outline: dashed 2px #a1a1a1;
+    outline-offset: -3px;
+}
+
+.container::after {
+    top: -40px;
+    right: -40px;
+    left: auto;
+}
+
+.container img {
+    display: block;
+
+    padding: 0.5rem;
+
+    background: #dad6cf;
+    border: #c2c2c2 solid 2px;
+}
